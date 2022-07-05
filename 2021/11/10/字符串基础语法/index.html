@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"pyofgavin.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="“&#x3D;&#x3D;”与equals区别12345678910public class Demo &amp;#123;	public static void main(String[] args) &amp;#123;     String strA&#x3D;&quot;helloworld&quot;;     String strB&#x3D; new String (&quot;helloworld&quot;);     System.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串基础语法">
+<meta property="og:url" content="https://pyofgavin.github.io/2021/11/10/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="curry_gavin@163.com">
+<meta property="og:description" content="“&#x3D;&#x3D;”与equals区别12345678910public class Demo &amp;#123;	public static void main(String[] args) &amp;#123;     String strA&#x3D;&quot;helloworld&quot;;     String strB&#x3D; new String (&quot;helloworld&quot;);     System.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-10T11:29:02.000Z">
+<meta property="article:modified_time" content="2021-11-12T06:24:47.062Z">
+<meta property="article:author" content="雍正专职八阿哥">
+<meta property="article:tag" content="Sring">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://pyofgavin.github.io/2021/11/10/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>字符串基础语法 | curry_gavin@163.com</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">curry_gavin@163.com</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pyofgavin.github.io/2021/11/10/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="雍正专职八阿哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="curry_gavin@163.com">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          字符串基础语法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-11-10 19:29:02" itemprop="dateCreated datePublished" datetime="2021-11-10T19:29:02+08:00">2021-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-11-12 14:24:47" itemprop="dateModified" datetime="2021-11-12T14:24:47+08:00">2021-11-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">基础语法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="“-”与equals区别"><a href="#“-”与equals区别" class="headerlink" title="“==”与equals区别"></a>“==”与equals区别</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class Demo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">     String strA=&quot;helloworld&quot;;</span><br><span class="line">     String strB= new String (&quot;helloworld&quot;);</span><br><span class="line">     System.out.println(strA == strB);  // ==用于数字比较，如果用于对象比较上，是两个内存的地址的数值</span><br><span class="line">     System.out.println(strA.equals(strB));//equls类提供的一个比较方法，比较的是字符串内容的判断</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="字符串对象（常量）池"><a href="#字符串对象（常量）池" class="headerlink" title="字符串对象（常量）池"></a>字符串对象（常量）池</h3><ul>
+<li>静态常量池：指的程序在加载的时候自动将程序之中保存的字符串、常量等，全部进行分配</li>
+<li>运行时常量池：当一个程序加载之后，里面可能有一些变量</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Demo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">    String str = &quot;helloworld&quot;;</span><br><span class="line">	byte s[] = str.getBytes();  //将字符串转化为字节数组</span><br><span class="line">	for (int i=0; i&lt;s.length; i++)</span><br><span class="line">	&#123;   </span><br><span class="line">		s[i]-=32;		</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(new String(s));</span><br><span class="line">	System.out.println(new String(s,0,5));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="String类常用方法"><a href="#String类常用方法" class="headerlink" title="String类常用方法"></a>String类常用方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">public String​(char[] value)将传入的全部字符数组变为字符串</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String​(char[] value, int offset, int count)将部分字符数组变为字符串</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public char charAt​(int index)获取指定索引位置的字符</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public char[] toCharArray​()将字符串中的数据以字符数组的形式返回</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String​(byte[] bytes)将全部的字节数组变为字符串</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String​(byte[] bytes, int offset, int length)将部分字节数组变为字符串</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public byte[] getBytes​() 将字符串转为字节数组</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public boolean equals​(String anObject)区分大小写的相等判断</span><br><span class="line">true if the given object represents a String equivalent to this string, false otherwise</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public boolean equalsIgnoreCase​(String anotherString)不区分大小写比较</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public int compareTo​(String anotherString)进行字符串大小比较，该方法返回一个int数据，该数据有三种取值：大于（&gt;0）、小于（&lt;0）、等于（=0）。</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public int compareToIgnoreCase​(String str)不区分大小写进行字符串大小比较</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public public boolean contains​(String s)判断子字符串是否存在</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public int indexOf​(String str)从头查找指定子字符串的位置，找不到返回-1</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public int indexOf​(String str, int fromIndex)从指定位置查找指定字符串的位置</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public int lastIndexOf​(String str)由后向前查找指定字符串的位置</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public boolean startsWith​(String prefix)判断是否以指定的字符串开头</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public boolean startsWith​(String prefix, int toffset)由指定位置判断是否以指定的字符串开头</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public boolean endsWith​(String suffix)判断是否以指定的字符串结尾</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String replaceAll​(String regex, String replacement)全部替换</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String replaceFirst​(String regex, String replacement)替换首个</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String[] split​(String regex)按照指定的字符串全部拆分</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String[] split​(String regex, int limit)按照指定的字符串拆分为指定个数，后面不拆了</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String substring​(int beginIndex)从指定索引截取到结尾</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String substring​(int beginIndex, int endIndex)截取指定索引范围中的子字符串</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public static String format​(String format, 各种类型 ... args)根据指定结构进行文本格式化显示</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String concat​(String str) //描述的就是字符串的连接,非静态的定义，没有入池</span><br><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        String s = &quot;菜鸟教程：&quot;;</span><br><span class="line">        s = s.concat(&quot;www.runoob.com&quot;);</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String intern​()字符串入池</span><br><span class="line">[https://blog.csdn.net/weichi7549/article/details/107731550](https://blog.csdn.net/weichi7549/article/details/107731550 &quot;Java之intern方法&quot;)</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public boolean isEmpty​()判断是否为空字符串（不是null）</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public int length​()计算字符串的长度</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String trim​()去除左右的空格信息</span><br><span class="line">return: A string whose value is this string, with any leading and trailing white space removed, or this string if it has no leading or trailing white space.</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String toUpperCase​()字符串内容转大写</span><br><span class="line">Returns:</span><br><span class="line">the String, converted to uppercase.</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line">public String toLowerCase​()字符串内容转小写</span><br><span class="line">Returns:</span><br><span class="line">the String, converted to lowercase.</span><br><span class="line">---------------------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Sring/" rel="tag"># Sring</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/10/%E7%B1%BB%E5%85%B3%E8%81%94%E7%BB%93%E6%9E%84/" rel="prev" title="Django学习">
+      <i class="fa fa-chevron-left"></i> Django学习
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/13/%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" rel="next" title="继承与多态">
+      继承与多态 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C-%E2%80%9D%E4%B8%8Eequals%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">“&#x3D;&#x3D;”与equals区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1%EF%BC%88%E5%B8%B8%E9%87%8F%EF%BC%89%E6%B1%A0"><span class="nav-number">2.</span> <span class="nav-text">字符串对象（常量）池</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E7%B1%BB%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">String类常用方法</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">雍正专职八阿哥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">雍正专职八阿哥</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
