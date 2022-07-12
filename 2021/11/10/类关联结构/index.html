@@ -1,209 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Head tag -->
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="love, passion, concentrate ">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Django学习 - null
+        
+    </title>
 
-<link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://pyofgavin.github.io/2021/11/10/类关联结构/">
 
+    <!-- Bootstrap Core CSS -->
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"pyofgavin.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
-  </script>
-
-  <meta name="description" content="-类关联结构12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849class Person &amp;#123;  private String name; &#x2F;&#x2F;私有属性  private int age ;&#x2F;&#x2F;私有属性  public Person (String name, in">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Django学习">
-<meta property="og:url" content="https://pyofgavin.github.io/2021/11/10/%E7%B1%BB%E5%85%B3%E8%81%94%E7%BB%93%E6%9E%84/index.html">
-<meta property="og:site_name" content="curry_gavin@163.com">
-<meta property="og:description" content="-类关联结构12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849class Person &amp;#123;  private String name; &#x2F;&#x2F;私有属性  private int age ;&#x2F;&#x2F;私有属性  public Person (String name, in">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-09T18:38:14.000Z">
-<meta property="article:modified_time" content="2021-11-10T09:13:04.609Z">
-<meta property="article:author" content="雍正专职八阿哥">
-<meta property="article:tag" content="python">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://pyofgavin.github.io/2021/11/10/%E7%B1%BB%E5%85%B3%E8%81%94%E7%BB%93%E6%9E%84/">
+   
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
+    
 
-  <title>Django学习 | curry_gavin@163.com</title>
-  
+    <!-- Custom CSS --> 
+    
+<link rel="stylesheet" href="/css/beantech.min.css">
 
 
+    
+<link rel="stylesheet" href="/css/donate.css">
+
+	
+<link rel="stylesheet" href="/css/w3.css">
+
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
 
 
+    
+<link rel="stylesheet" href="/css/widget.css">
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+    
+<link rel="stylesheet" href="/css/rocket.css">
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+    }
+   .post-heading{
+    padding:20px;
+    }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+</style>
 
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">curry_gavin@163.com</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pyofgavin.github.io/2021/11/10/%E7%B1%BB%E5%85%B3%E8%81%94%E7%BB%93%E6%9E%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="雍正专职八阿哥">
-      <meta itemprop="description" content="love, passion, concentrate ">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="curry_gavin@163.com">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Django学习
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-11-10 02:38:14 / Modified: 17:13:04" itemprop="dateCreated datePublished" datetime="2021-11-10T02:38:14+08:00">2021-11-10</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%B1%BB%E5%85%B3%E8%81%94%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">类关联结构</span></a>
-                </span>
-            </span>
-
-          
-
+<header id="headerid" class="w3-indigo intro-header" style="position:relative;">
+    <!-- Signature -->
+	
+        <div class="container">
+            <div class=" row" >
+			
+			<canvas id="particles-js-canvas" style="position:absolute;z-index:1;top:0px;left:0px;" width="100%" height="50%"></canvas>
+			
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
+                
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#python" title="python">python</a>
+                            
+                        </div>
+                        <h1>Django学习</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by 雍正专职八阿哥 on
+                            2021-11-10
+                        </span>
+                    </div>
+                
+                </div>
+            </div>
         </div>
-      </header>
+  
+</header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">curry_gavin@163.com</a>
+        </div>
 
-      
-        <h3 id="类关联结构"><a href="#类关联结构" class="headerlink" title="-类关联结构"></a>-类关联结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">  private String name; //私有属性</span><br><span class="line">  private int age ;//私有属性</span><br><span class="line">  public Person (String name, int age)&#123;//构造方法</span><br><span class="line">	this.name = name; </span><br><span class="line">	this.age =age;</span><br><span class="line">  &#125;</span><br><span class="line">  public String getInfo()&#123; //获取信息</span><br><span class="line">	return &quot;姓名：&quot;+ this.name +&quot;、年龄：&quot;+this.age;</span><br><span class="line">  &#125;</span><br><span class="line">   private Car car;//一个人有一辆车，属性设置</span><br><span class="line">   public void setCar(Car car)&#123;</span><br><span class="line">	this.car =car;</span><br><span class="line">   &#125;</span><br><span class="line">   public Car getCar()&#123;</span><br><span class="line">	return this.car;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Car&#123;</span><br><span class="line">	private String brand;</span><br><span class="line">	private double price;</span><br><span class="line">	public Car(String brand, double price)&#123;</span><br><span class="line">		this.brand =brand;</span><br><span class="line">		this.price =price;</span><br><span class="line">	&#125;</span><br><span class="line">    public String getInfo()&#123;</span><br><span class="line">		return &quot;品牌：&quot;+this.brand +&quot;、价格：&quot;+this.price;</span><br><span class="line">    &#125;</span><br><span class="line">    private Person person;//</span><br><span class="line">	public void setPerson(Person person)&#123;</span><br><span class="line">		this.person=person;</span><br><span class="line">	&#125;</span><br><span class="line">	public Person getPerson()&#123;</span><br><span class="line">		return this.person;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Demo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//第一步：声明对象并设置彼此的关系</span><br><span class="line">	  Person person =new Person(&quot;张伟&quot;,29); //对象实例化</span><br><span class="line">	  Car car =new Car(&quot;宝马&quot;,580000.00);//对象实例化</span><br><span class="line">	  person.setCar(car);  //一个人有一辆车,调用setcar方法</span><br><span class="line">	  car.setPerson(person);//一辆车属于一辆车，调用setperson方法</span><br><span class="line">	   //第二步：根据关系获取数据</span><br><span class="line">	   System.out.println(person.getCar().getInfo());</span><br><span class="line">	   System.out.println(car.getPerson().getInfo());</span><br><span class="line">	      &#125;		</span><br><span class="line">       &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a  href="/">Homepage</a>
+                    </li>
+		    
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu1</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu2</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu3</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu3</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu5</a>
+                           
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="类关联结构"><a href="#类关联结构" class="headerlink" title="-类关联结构"></a>-类关联结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">  private String name; //私有属性</span><br><span class="line">  private int age ;//私有属性</span><br><span class="line">  public Person (String name, int age)&#123;//构造方法</span><br><span class="line">	this.name = name; </span><br><span class="line">	this.age =age;</span><br><span class="line">  &#125;</span><br><span class="line">  public String getInfo()&#123; //获取信息</span><br><span class="line">	return &quot;姓名：&quot;+ this.name +&quot;、年龄：&quot;+this.age;</span><br><span class="line">  &#125;</span><br><span class="line">   private Car car;//一个人有一辆车，属性设置</span><br><span class="line">   public void setCar(Car car)&#123;</span><br><span class="line">	this.car =car;</span><br><span class="line">   &#125;</span><br><span class="line">   public Car getCar()&#123;</span><br><span class="line">	return this.car;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Car&#123;</span><br><span class="line">	private String brand;</span><br><span class="line">	private double price;</span><br><span class="line">	public Car(String brand, double price)&#123;</span><br><span class="line">		this.brand =brand;</span><br><span class="line">		this.price =price;</span><br><span class="line">	&#125;</span><br><span class="line">    public String getInfo()&#123;</span><br><span class="line">		return &quot;品牌：&quot;+this.brand +&quot;、价格：&quot;+this.price;</span><br><span class="line">    &#125;</span><br><span class="line">    private Person person;//</span><br><span class="line">	public void setPerson(Person person)&#123;</span><br><span class="line">		this.person=person;</span><br><span class="line">	&#125;</span><br><span class="line">	public Person getPerson()&#123;</span><br><span class="line">		return this.person;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Demo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//第一步：声明对象并设置彼此的关系</span><br><span class="line">	  Person person =new Person(&quot;张伟&quot;,29); //对象实例化</span><br><span class="line">	  Car car =new Car(&quot;宝马&quot;,580000.00);//对象实例化</span><br><span class="line">	  person.setCar(car);  //一个人有一辆车,调用setcar方法</span><br><span class="line">	  car.setPerson(person);//一辆车属于一辆车，调用setperson方法</span><br><span class="line">	   //第二步：根据关系获取数据</span><br><span class="line">	   System.out.println(person.getCar().getInfo());</span><br><span class="line">	   System.out.println(car.getPerson().getInfo());</span><br><span class="line">	      &#125;		</span><br><span class="line">       &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="一对多关联"><a href="#一对多关联" class="headerlink" title="一对多关联"></a>一对多关联</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">class Car &#123;												// 描述汽车</span><br><span class="line">	private String name;								// 汽车名称</span><br><span class="line">	private double price;								// 汽车价值</span><br><span class="line">	private Person person; 								// 车应该属于一个人</span><br><span class="line">	public Car(String name, double price) &#123;				// 构造传入汽车信息</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.price = price;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	public void setPerson(Person person) &#123;				// 配置汽车与人的关系</span><br><span class="line">		this.person = person;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	public Person getPerson() &#123;							// 获取汽车拥有人信息</span><br><span class="line">		return this.person;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;							// 获取汽车信息</span><br><span class="line">		return &quot;汽车品牌型号：&quot; + this.name + &quot;、汽车价值：&quot; + this.price;</span><br><span class="line">	&#125;</span><br><span class="line">	// setter、getter略</span><br><span class="line">&#125;</span><br><span class="line">class Person &#123;										// 描述人</span><br><span class="line">	private String name;								// 人的姓名</span><br><span class="line">	private int age;									// 人的年龄</span><br><span class="line">	private Car car; 									// 一个人有一辆车，如果没有车则为null</span><br><span class="line">	public Person(String name, int age) &#123;				// 构造传入人的信息</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setCar(Car car) &#123;						// 设置人与汽车的关系</span><br><span class="line">		this.car = car;</span><br><span class="line">	&#125;</span><br><span class="line">	public Car getCar() &#123;								// 获取人对应的汽车信息</span><br><span class="line">		return this.car;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;							// 获取人员信息</span><br><span class="line">		return &quot;姓名：&quot; + this.name + &quot;、年龄：&quot; + this.age;</span><br><span class="line">	&#125;</span><br><span class="line">	// setter、getter略</span><br><span class="line">&#125;</span><br><span class="line">public class JavaDemo &#123;</span><br><span class="line">	public static void main(String args[]) &#123;</span><br><span class="line">		// 第一步：声明对象并且设置彼此的关系</span><br><span class="line">		Person person = new Person(&quot;林希勒&quot;, 29);		// 实例化Person类对象</span><br><span class="line">		Car car = new Car(&quot;奔驰G50&quot;, 1588800.00);		// 实例化Car类对象</span><br><span class="line">		person.setCar(car); 							// 一个人有一辆车</span><br><span class="line">		car.setPerson(person); 						// 一辆车属于一个人</span><br><span class="line">		// 第二步：根据关系获取数据</span><br><span class="line">		System.out.println(person.getCar().getInfo()); // 通过人获取汽车的信息</span><br><span class="line">		System.out.println(car.getPerson().getInfo());	// 通过汽车获取拥有人的信息</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Car &#123;												// 描述汽车</span><br><span class="line">	private String name;								// 汽车名称</span><br><span class="line">	private double price;								// 汽车价值</span><br><span class="line">	private Person person; 								// 车应该属于一个人</span><br><span class="line">	public Car(String name, double price) &#123;				// 构造传入汽车信息</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.price = price;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	public void setPerson(Person person) &#123;				// 配置汽车与人的关系</span><br><span class="line">		this.person = person;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	public Person getPerson() &#123;							// 获取汽车拥有人信息</span><br><span class="line">		return this.person;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;							// 获取汽车信息</span><br><span class="line">		return &quot;汽车品牌型号：&quot; + this.name + &quot;、汽车价值：&quot; + this.price;</span><br><span class="line">	&#125;</span><br><span class="line">	// setter、getter略</span><br><span class="line">&#125;</span><br><span class="line">class Person &#123;										// 描述人</span><br><span class="line">	private String name;								// 人的姓名</span><br><span class="line">	private int age;									// 人的年龄</span><br><span class="line">	private Car car; 									// 一个人有一辆车，如果没有车则为null</span><br><span class="line">	public Person(String name, int age) &#123;				// 构造传入人的信息</span><br><span class="line">		this.name = name;</span><br><span class="line">		this.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setCar(Car car) &#123;						// 设置人与汽车的关系</span><br><span class="line">		this.car = car;</span><br><span class="line">	&#125;</span><br><span class="line">	public Car getCar() &#123;								// 获取人对应的汽车信息</span><br><span class="line">		return this.car;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;							// 获取人员信息</span><br><span class="line">		return &quot;姓名：&quot; + this.name + &quot;、年龄：&quot; + this.age;</span><br><span class="line">	&#125;</span><br><span class="line">	// setter、getter略</span><br><span class="line">&#125;</span><br><span class="line">public class JavaDemo &#123;</span><br><span class="line">	public static void main(String args[]) &#123;</span><br><span class="line">		// 第一步：声明对象并且设置彼此的关系</span><br><span class="line">		Person person = new Person(&quot;林希勒&quot;, 29);		// 实例化Person类对象</span><br><span class="line">		Car car = new Car(&quot;奔驰G50&quot;, 1588800.00);		// 实例化Car类对象</span><br><span class="line">		person.setCar(car); 							// 一个人有一辆车</span><br><span class="line">		car.setPerson(person); 						// 一辆车属于一个人</span><br><span class="line">		// 第二步：根据关系获取数据</span><br><span class="line">		System.out.println(person.getCar().getInfo()); // 通过人获取汽车的信息</span><br><span class="line">		System.out.println(car.getPerson().getInfo());	// 通过汽车获取拥有人的信息</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="数据表与简单java类映射转换"><a href="#数据表与简单java类映射转换" class="headerlink" title="数据表与简单java类映射转换"></a>数据表与简单java类映射转换</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">class Dept &#123;</span><br><span class="line">   private long deptno;</span><br><span class="line">   private String dname;</span><br><span class="line">   private String loc;</span><br><span class="line">   private Emp emps[];  //保存多个雇员信息</span><br><span class="line">   public Dept(long deptno,String dname, String loc)&#123;</span><br><span class="line">	this.dname=dname;</span><br><span class="line">	this.deptno=deptno;</span><br><span class="line">	this.loc =loc;</span><br><span class="line">   &#125;</span><br><span class="line">  public void setEmps(Emp[] emps)&#123;  //设置部门与雇员的关联</span><br><span class="line">	this.emps=emps;</span><br><span class="line">  &#125;</span><br><span class="line">  public Emp[] getEmps()&#123;</span><br><span class="line">	return this.emps;</span><br><span class="line">  &#125;</span><br><span class="line">  public String getInfo()&#123;</span><br><span class="line">	return &quot;【部门信息】部门编号 =&quot;+this.deptno+&quot;部门名称 =&quot;</span><br><span class="line">		+this.dname+&quot;部门位置 =&quot;+this.loc;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Emp&#123;</span><br><span class="line">	  private long empno;</span><br><span class="line">	  private String ename;</span><br><span class="line">	  private String job;</span><br><span class="line">	  private double sal;</span><br><span class="line">	  private double common;</span><br><span class="line">	  private Dept dept;</span><br><span class="line">	  private Emp mgr;</span><br><span class="line">	  public Emp(long empno,String ename,String job,double sal,double common)&#123;</span><br><span class="line">		this.empno =empno;</span><br><span class="line">		this.ename=ename;</span><br><span class="line">		this.job=job;</span><br><span class="line">		this.sal=sal;</span><br><span class="line">		this.common=common; </span><br><span class="line">	  &#125;</span><br><span class="line">	  public String getInfo()&#123;</span><br><span class="line">		return &quot;【雇员信息】编号=&quot;+this.empno+&quot;姓名=&quot;+this.ename+&quot;职位=&quot;+this.job+&quot;工资=&quot;+</span><br><span class="line">			this.sal+&quot;津贴&quot;+this.common;</span><br><span class="line">	  &#125;</span><br><span class="line">	  public void setDept(Dept dept)&#123; </span><br><span class="line">		this.dept=dept;</span><br><span class="line">	  &#125;</span><br><span class="line">	  public void setMgr(Emp mgr)&#123;</span><br><span class="line">		this.mgr =mgr;</span><br><span class="line">	  &#125;</span><br><span class="line">	  public Dept getDept()&#123;</span><br><span class="line">		return this.dept;</span><br><span class="line">	  &#125;</span><br><span class="line">	  public Emp getMgr()&#123;</span><br><span class="line">		return this.mgr;</span><br><span class="line">	  &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Demo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">			Dept dept=new Dept(10,&quot;技术部&quot;,&quot;南京&quot;);</span><br><span class="line">			Emp empA = new Emp(5925L,&quot;luck&quot;,&quot;P1&quot;,4000.00,0.00); //雇员信息</span><br><span class="line">			Emp empB = new Emp(7585L,&quot;hope&quot;,&quot;P2&quot;,6000.00,400.00);//雇员信息</span><br><span class="line">			Emp empC = new Emp(7725L,&quot;raw&quot;,&quot;P3&quot;,8000.00,800.00);//</span><br><span class="line">			empA.setDept(dept);//设置雇员与部门的关联</span><br><span class="line">			empB.setDept(dept);//设置雇员与部门的关联</span><br><span class="line">			empC.setDept(dept);//设置雇员与部门的关联</span><br><span class="line">			empA.setMgr(empB); //设置雇员与领导的关联</span><br><span class="line">			empB.setMgr(empC);//设置雇员与领导的关联</span><br><span class="line">			dept.setEmps(new Emp[] &#123;empA,empB,empC&#125;);// 部门与雇员</span><br><span class="line">			System.out.println(dept.getInfo());  // 部门信息</span><br><span class="line">			for (int x =0;x&lt;dept.getEmps().length ;x++ )</span><br><span class="line">			&#123;  System.out.println(dept.getEmps()[x].getInfo());</span><br><span class="line">		         if (dept.getEmps()[x].getMgr() !=null)&#123;// 该雇员存在有领导</span><br><span class="line">			       System.out.println(dept.getEmps()[x].getMgr().getInfo());</span><br><span class="line">		   &#125;	</span><br><span class="line">       &#125;</span><br><span class="line">	   System.out.println(&quot;---------------------------------------------------&quot;);</span><br><span class="line">       System.out.println(empB.getDept().getInfo());// 根据雇员获取部门信息</span><br><span class="line">       System.out.println(empB.getMgr().getInfo());// 根据雇员获取领导信息</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;   </span><br><span class="line">		代码结果：</span><br><span class="line">			    【部门信息】部门编号 =10部门名称 =技术部部门位置 =南京</span><br><span class="line">				【雇员信息】编号=5925姓名=luck职位=P1工资=4000.0津贴0.0</span><br><span class="line">				【雇员信息】编号=7585姓名=hope职位=P2工资=6000.0津贴400.0</span><br><span class="line">				【雇员信息】编号=7585姓名=hope职位=P2工资=6000.0津贴400.0</span><br><span class="line">				【雇员信息】编号=7725姓名=raw职位=P3工资=8000.0津贴800.0</span><br><span class="line">				【雇员信息】编号=7725姓名=raw职位=P3工资=8000.0津贴800.0</span><br><span class="line">---------------------------------------------------</span><br><span class="line">【部门信息】部门编号 =10部门名称 =技术部部门位置 =南京</span><br><span class="line">【雇员信息】编号=7725姓名=raw职位=P3工资=8000.0津贴800.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="多对多"><a href="#多对多" class="headerlink" title="多对多"></a>多对多</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"> class Member &#123;</span><br><span class="line">	private String mid ;</span><br><span class="line">	private String name ;</span><br><span class="line">	private Product products [] ;</span><br><span class="line">	public Member(String mid,String name) &#123;</span><br><span class="line">		this.mid = mid ;</span><br><span class="line">		this.name = name ;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setProducts(Product products []) &#123;</span><br><span class="line">		this.products = products ;</span><br><span class="line">	&#125;</span><br><span class="line">	public Product [] getProducts() &#123;</span><br><span class="line">		return this.products ;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;</span><br><span class="line">		return &quot;【用户信息】mid = &quot; + this.mid + &quot;、name = &quot; + this.name ;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Product &#123;</span><br><span class="line">	private long pid ;</span><br><span class="line">	private String title ;</span><br><span class="line">	private double price ;</span><br><span class="line">	private Member members [] ;</span><br><span class="line">	public Product(long pid,String title,double price) &#123;</span><br><span class="line">		this.pid = pid ;</span><br><span class="line">		this.title = title ;</span><br><span class="line">		this.price = price ;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setMembers(Member members[]) &#123;</span><br><span class="line">		this.members = members ;</span><br><span class="line">	&#125;</span><br><span class="line">	public Member [] getMembers() &#123;</span><br><span class="line">		return this.members ;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;</span><br><span class="line">		return &quot;【商品信息】pid = &quot; + this.pid + &quot;、title = &quot; + this.title + &quot;、price = &quot; + this.price ;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class JavaDemo &#123;</span><br><span class="line">	public static void main(String args[]) &#123;</span><br><span class="line">		// 第一步：根据结构设置对象数据</span><br><span class="line">		Member memA = new Member(&quot;mldn&quot;,&quot;张三&quot;) ;</span><br><span class="line">		Member memB = new Member(&quot;mldnjava&quot;,&quot;李四&quot;) ;</span><br><span class="line">		Product proA = new Product(1L,&quot;Java开发图书&quot;,79.8) ;</span><br><span class="line">		Product proB = new Product(2L,&quot;非常大的B的耳机&quot;,2309.8) ;</span><br><span class="line">		Product proC = new Product(3L,&quot;小米手机&quot;,3000.8) ;</span><br><span class="line">		memA.setProducts(new Product[] &#123;proA,proB,proC&#125; ) ;</span><br><span class="line">		memB.setProducts(new Product[] &#123;proA&#125; ) ;</span><br><span class="line">		proA.setMembers(new Member[] &#123;memA,memB&#125;) ;</span><br><span class="line">		proB.setMembers(new Member[] &#123;memA&#125;) ;</span><br><span class="line">		proC.setMembers(new Member[] &#123;memA&#125;) ;</span><br><span class="line">		// 第二步：根据要求获取数据</span><br><span class="line">		System.out.println(&quot;--------------- 根据用户查看浏览商品信息 -----------------&quot;) ;</span><br><span class="line">		System.out.println(memA.getInfo()) ;</span><br><span class="line">		for (int x = 0 ; x &lt; memA.getProducts().length ; x ++) &#123;</span><br><span class="line">			System.out.println(&quot;\t|- &quot; + memA.getProducts()[x].getInfo()) ;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;--------------- 根据商品找到被浏览的记录 -----------------&quot;) ;</span><br><span class="line">		System.out.println(proA.getInfo()) ;</span><br><span class="line">		for (int x = 0 ; x &lt; proA.getMembers().length ; x ++) &#123;</span><br><span class="line">			System.out.println(&quot;\t|- &quot; + proA.getMembers()[x].getInfo()) ;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
@@ -212,200 +274,281 @@
 
 <h3 id="一对多、多对多综合"><a href="#一对多、多对多综合" class="headerlink" title="一对多、多对多综合"></a>一对多、多对多综合</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line">class Member &#123;</span><br><span class="line">	private String mid ;</span><br><span class="line">	private String name ;</span><br><span class="line">	private Role roles [] ; </span><br><span class="line">	public Member(String mid,String name) &#123;</span><br><span class="line">		this.mid = mid ;</span><br><span class="line">		this.name = name ;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setRoles(Role roles[]) &#123;</span><br><span class="line">		this.roles = roles ;</span><br><span class="line">	&#125;</span><br><span class="line">	public Role [] getRoles() &#123;</span><br><span class="line">		return this.roles ;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;</span><br><span class="line">		return &quot;【用户信息】mid = &quot; + this.mid + &quot;、name = &quot; + this.name ;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Role &#123;</span><br><span class="line">	private long rid ;</span><br><span class="line">	private String title ;</span><br><span class="line">	private Member members [] ;</span><br><span class="line">	private Privilege privileges [] ;</span><br><span class="line">	public Role(long rid,String title) &#123;</span><br><span class="line">		this.rid = rid ;</span><br><span class="line">		this.title = title ;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setMembers(Member members []) &#123;</span><br><span class="line">		this.members = members ;</span><br><span class="line">	&#125;</span><br><span class="line">	public Member [] getMembers() &#123;</span><br><span class="line">		return this.members ;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setPrivileges(Privilege privileges []) &#123;</span><br><span class="line">		this.privileges = privileges ;</span><br><span class="line">	&#125;</span><br><span class="line">	public Privilege [] getPrivileges() &#123;</span><br><span class="line">		return this.privileges ;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;</span><br><span class="line">		return &quot;【角色信息】rid = &quot; + this.rid + &quot;、title = &quot; + this.title ;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">class Privilege &#123;</span><br><span class="line">	private long pid ;</span><br><span class="line">	private String title ;</span><br><span class="line">	private Role role ;</span><br><span class="line">	public Privilege(long pid,String title) &#123;</span><br><span class="line">		this.pid = pid ;</span><br><span class="line">		this.title = title ;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setRole(Role role) &#123;</span><br><span class="line">		this.role = role ;</span><br><span class="line">	&#125;</span><br><span class="line">	public Role getRole() &#123;</span><br><span class="line">		return this.role ;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo() &#123;</span><br><span class="line">		return &quot;【权限信息】pid = &quot; + this.pid + &quot;、title = &quot; + this.title ;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class JavaDemo &#123;</span><br><span class="line">	public static void main(String args[]) &#123;</span><br><span class="line">		// 第一步：根据结构设置对象数据</span><br><span class="line">		Member memA = new Member(&quot;mldn-a&quot;,&quot;张三&quot;) ;</span><br><span class="line">		Member memB = new Member(&quot;mldn-b&quot;,&quot;李四&quot;) ;</span><br><span class="line">		Role roleA = new Role(1L,&quot;系统配置&quot;) ;</span><br><span class="line">		Role roleB = new Role(2L,&quot;备份管理&quot;) ;</span><br><span class="line">		Role roleC = new Role(3L,&quot;人事管理&quot;) ;</span><br><span class="line">		Privilege priA = new Privilege(1000L,&quot;系统初始化&quot;) ;</span><br><span class="line">		Privilege priB = new Privilege(1001L,&quot;系统系统还原&quot;) ;</span><br><span class="line">		Privilege priC = new Privilege(1002L,&quot;系统环境修改&quot;) ;</span><br><span class="line">		Privilege priD = new Privilege(2000L,&quot;备份员工数据&quot;) ;</span><br><span class="line">		Privilege priE = new Privilege(2001L,&quot;备份部门数据&quot;) ;</span><br><span class="line">		Privilege priF = new Privilege(2002L,&quot;备份公文数据&quot;) ;</span><br><span class="line">		Privilege priG = new Privilege(3000L,&quot;增加员工&quot;) ;</span><br><span class="line">		Privilege priH = new Privilege(3001L,&quot;编辑员工&quot;) ;</span><br><span class="line">		Privilege priI = new Privilege(3002L,&quot;浏览员工&quot;) ;</span><br><span class="line">		Privilege priJ = new Privilege(3003L,&quot;员工离职&quot;) ;</span><br><span class="line">		// 增加角色与权限的对应关系</span><br><span class="line">		roleA.setPrivileges(new Privilege[] &#123;priA,priB,priC&#125;) ;</span><br><span class="line">		roleB.setPrivileges(new Privilege[] &#123;priD,priE,priF&#125;) ;</span><br><span class="line">		roleC.setPrivileges(new Privilege[] &#123;priG,priH,priI,priJ&#125;) ;</span><br><span class="line">		// 增加权限与角色对应</span><br><span class="line">		priA.setRole(roleA) ;</span><br><span class="line">		priB.setRole(roleA) ;</span><br><span class="line">		priC.setRole(roleA) ;</span><br><span class="line">		priD.setRole(roleB) ;</span><br><span class="line">		priE.setRole(roleB) ;</span><br><span class="line">		priF.setRole(roleB) ;</span><br><span class="line">		priG.setRole(roleC) ;</span><br><span class="line">		priH.setRole(roleC) ;</span><br><span class="line">		priI.setRole(roleC) ;</span><br><span class="line">		priJ.setRole(roleC) ;</span><br><span class="line">		// 增加用户与角色的对应关系</span><br><span class="line">		memA.setRoles(new Role[] &#123;roleA,roleB&#125;) ;</span><br><span class="line">		memB.setRoles(new Role[] &#123;roleA,roleB,roleC&#125;) ;</span><br><span class="line">		roleA.setMembers(new Member[] &#123;memA,memB&#125;) ;</span><br><span class="line">		roleB.setMembers(new Member[] &#123;memA,memB&#125;) ;</span><br><span class="line">		roleC.setMembers(new Member[] &#123;memB&#125;) ;</span><br><span class="line">		// 第二步：根据要求获取数据</span><br><span class="line">		System.out.println(&quot;------ 通过用户查找信息 ------&quot;) ;</span><br><span class="line">		System.out.println(memB.getInfo()) ;</span><br><span class="line">		for (int x = 0 ; x &lt; memB.getRoles().length ; x ++) &#123;</span><br><span class="line">			System.out.println(&quot;\t|- &quot; + memB.getRoles()[x].getInfo()) ;</span><br><span class="line">			for (int y = 0 ; y &lt; memB.getRoles()[x].getPrivileges().length ; y ++) &#123;</span><br><span class="line">				System.out.println(&quot;\t\t|- &quot; + memB.getRoles()[x].getPrivileges()[y].getInfo()) ;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;------ 通过角色查找信息 ------&quot;) ;</span><br><span class="line">		System.out.println(roleB.getInfo()) ;</span><br><span class="line">		System.out.println(&quot;\t|- 浏览此角色下的所有权限信息：&quot;) ;</span><br><span class="line">		for (int x = 0 ; x &lt; roleB.getPrivileges().length ; x ++) &#123;</span><br><span class="line">			System.out.println(&quot;\t\t|- &quot; + roleB.getPrivileges()[x].getInfo()) ;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;\t|- 浏览此角色下的所有用户信息：&quot;) ;</span><br><span class="line">		for (int x = 0 ; x &lt; roleB.getMembers().length ; x ++) &#123;</span><br><span class="line">			System.out.println(&quot;\t\t|- &quot; + roleB.getMembers()[x].getInfo()) ;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;------ 通过权限查找信息 ------&quot;) ;</span><br><span class="line">		System.out.println(priA.getInfo()) ;</span><br><span class="line">		for (int x = 0 ; x &lt; priA.getRole().getMembers().length ; x++) &#123;</span><br><span class="line">			System.out.println(&quot;\t|- &quot; + priA.getRole().getMembers()[x].getInfo()) ;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2021/11/10/字符串基础语法/" data-toggle="tooltip" data-placement="top" title="字符串基础语法">&larr; Previous post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2021/11/10/对象数组/" data-toggle="tooltip" data-placement="top" title="对象数组">Next post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+            </div>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">Tags</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#python" title="python">python</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://www.sumoon.com" target="_blank">ACE theme</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
     </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/python/" rel="tag"># python</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/11/10/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/" rel="prev" title="对象数组">
-      <i class="fa fa-chevron-left"></i> 对象数组
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/11/10/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" rel="next" title="字符串基础语法">
-      字符串基础语法 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
+</article>
 
 
 
-          </div>
-          
 
+
+
+<!-- async load function -->
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/kinggozhang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 雍正专职八阿哥 2022 
+                    <br>
+                    Powered by <a target="_blank" rel="noopener" href="http://www.hexo.io">Hexo</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Theme by <a target="_blank" rel="noopener" href="https://github.com/kinggozhang/hexo-theme-ace">ACE</a> 
+					
+					
+					<i class="fa fa-eye" id="leancounter"></i>
+					
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+   
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+
+<!-- Bootstrap Core JavaScript -->
+
+   
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+	
+<script src="/js/particles.js"></script>
+
+	
+<script src="/js/particles_config.js"></script>
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
 </script>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%85%B3%E8%81%94%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">-类关联结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E5%AF%B9%E5%A4%9A%E5%85%B3%E8%81%94"><span class="nav-number">2.</span> <span class="nav-text">一对多关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%8E%E7%AE%80%E5%8D%95java%E7%B1%BB%E6%98%A0%E5%B0%84%E8%BD%AC%E6%8D%A2"><span class="nav-number">3.</span> <span class="nav-text">数据表与简单java类映射转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%AF%B9%E5%A4%9A"><span class="nav-number">4.</span> <span class="nav-text">多对多</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E5%AF%B9%E5%A4%9A%E3%80%81%E5%A4%9A%E5%AF%B9%E5%A4%9A%E7%BB%BC%E5%90%88"><span class="nav-number">5.</span> <span class="nav-text">一对多、多对多综合</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://pyofgavin.github.io/2021/11/10/%E7%B1%BB%E5%85%B3%E8%81%94%E7%BB%93%E6%9E%84/index.html/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">雍正专职八阿哥</p>
-  <div class="site-description" itemprop="description">love, passion, concentrate </div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">28</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">17</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-        <span class="site-state-item-count">19</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
 
 
 
-      </div>
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">雍正专职八阿哥</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
+<!-- Baidu Tongji -->
 
 
 
 
 
 
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://pyofgavin.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
+
 </html>
