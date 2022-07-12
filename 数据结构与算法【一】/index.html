@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="love, passion, concentrate ">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          数据结构与算法【一】 - null
+        
+    </title>
+
+    <link rel="canonical" href="https://pyofgavin.github.io/数据结构与算法【一】/">
+
+    <!-- Bootstrap Core CSS -->
+
+   
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    
+
+    <!-- Custom CSS --> 
+    
+<link rel="stylesheet" href="/css/beantech.min.css">
+
+
+    
+<link rel="stylesheet" href="/css/donate.css">
+
+	
+<link rel="stylesheet" href="/css/w3.css">
+
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+    }
+   .post-heading{
+    padding:20px;
+    }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+ 
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+    }
+
+    .carousel-caption h3 {
+      color: #fff !important;
+    }
+
+</style>
+
+<header id="headerid" class="w3-indigo intro-header" style="position:relative;">
+    <!-- Signature -->
+	
+        <div class="container">
+            <div class=" row" >
+			
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
+                
+				
+                    <div class="site-heading"  style="padding:40px">
+                        <h1>数据结构与算法【一】</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading"></span>
+                    </div>
+                
+                
+                </div>
+            </div>
+        </div>
+  
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">curry_gavin@163.com</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a  href="/">Homepage</a>
+                    </li>
+		    
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu1</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu2</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu3</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu3</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">menu5</a>
+                           
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+	        
+                <h4 id="数据结构的概述"><a href="#数据结构的概述" class="headerlink" title="数据结构的概述"></a>数据结构的概述</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">狭义：</span><br><span class="line">	数据结构是专门研究数据存储的问题 </span><br><span class="line">    数据的存储包含两个方面：个体的存储 + 个体的关系的存储</span><br><span class="line">广义：</span><br><span class="line">	数据结构既包含数据的存储也包含数据的操作</span><br><span class="line">	对存储数据的操作就是算法</span><br></pre></td></tr></table></figure>
+
+<p>算法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">狭义：</span><br><span class="line">    算法是和数据的存储方式密切相关</span><br><span class="line">广义：</span><br><span class="line">	算法和数据的存储方式无关</span><br><span class="line">	这就是泛型的思想	</span><br></pre></td></tr></table></figure>
+
+<p>数据的存储结构有几种</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">线性</span><br><span class="line">	连续存储【数组】</span><br><span class="line">		优点：存取速度很快</span><br><span class="line">		缺点：插入删除元素很慢，空间通常是有限制的</span><br><span class="line">	离散存储【链表】</span><br><span class="line">		优点：空间没有限制，插入删除元素很快	</span><br><span class="line">		缺点：存取速度慢		</span><br></pre></td></tr></table></figure>
+
+<p>线性结构的应用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">栈</span><br><span class="line">队列</span><br></pre></td></tr></table></figure>
+
+<p>非线性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">树</span><br><span class="line">图</span><br></pre></td></tr></table></figure>
+
+<p>结题的方法和步骤</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">衡量算法的标准</span><br><span class="line">	1、时间复杂度</span><br><span class="line">		大概程序要执行的次数，而非执行的时间。</span><br><span class="line">		</span><br><span class="line">	2、空间复杂度</span><br><span class="line">		算法执行过程中大概所占用的最大内存</span><br><span class="line">		</span><br><span class="line">	3、难易程度（主要是应用方面看重）</span><br><span class="line">	</span><br><span class="line">	4、健壮性（不能别人给一个非法的输入就挂掉）</span><br></pre></td></tr></table></figure>
+
+<p>数据结构的地位</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数据结构是软件中最核心的课程</span><br></pre></td></tr></table></figure>
+
+<p>按数据结构的思路理解数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">字段（一个属性）</span><br><span class="line">记录（一个事务）</span><br><span class="line">表（一类事务的集合）</span><br><span class="line">外键表示事务与事务之间的关系</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">程序 = 数据的存储 + 数据的操作 + 可以被计算机执行的语言</span><br></pre></td></tr></table></figure>
+
+<h4 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h4><p>2.1 指针概述</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指针的重要性：内存是可以被CPU直接访问的，硬盘不行，主要靠地址总线、数据总线、控制总线访问内存。内存分为很多格子单元，格子编号范围是0-4G-1。地址总线确定对哪个单元进行操作，数据总线确定是读还是写。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指针是C语言的 灵魂</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">地址  </span><br><span class="line">    地址就是内存单元的编号</span><br><span class="line">    从0开始的非负整数</span><br><span class="line">    范围：0--FFFFFFFF[0-4G-1]（地址线是32位，刚好控制2的32次）</span><br><span class="line">指针：  </span><br><span class="line">    指针就是地址  地址就是指针</span><br><span class="line">    指针变量是存放内存单元地址的变量</span><br><span class="line">    指针的本质是一个操作受限的非负整数（不能加乘除，只能减）</span><br></pre></td></tr></table></figure>
+
+<p>2.2 基本类型的指针</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> * p; <span class="comment">//p是个变量名字, int * 表示该p变量只能存储int类型变量的地址</span></span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">int</span> j;</span><br><span class="line"></span><br><span class="line">	p = &amp;i; <span class="comment">// p指向变量i的地址</span></span><br><span class="line">	*p = i; <span class="comment">// 等价于 i = i;</span></span><br><span class="line"><span class="comment">//	j = *p; // 等价于 j = i;</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;i = %d, j = %d, *p = %d\n&quot;</span>, i, j, *p);	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">10</span>;  </span><br><span class="line"><span class="keyword">int</span> *p = &amp;i; <span class="comment">//等价于 int *p;	p = &amp;i;   表示*p的值是变量i的地址</span></span><br></pre></td></tr></table></figure>
+
+<p>详解这两部操作：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. p存放了i的地址，所以我们说p指向了i</span><br><span class="line">2. p和i是完全不同的两个变量，修改其中的任意一个变量的值，不会影响另一变量的值</span><br><span class="line">3. p指向i，*p就是i变量本身。更形象的说所有出现*p的地方都可以换成i，所有出现i的地方都可以换成*p</span><br></pre></td></tr></table></figure>
+
+<p>总结</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1、 如何一个指针变量(假定为p)存放了某个普通变量(假定为i)的地址，那我们就可以说：“p指向了i”， 但p与i是两个不同的变量，修改p的值不影响i的值，修改i的值不影响p的值.</span><br><span class="line">2、 *p等价于i 或者说*p可以与i在任何地方互换</span><br><span class="line">3、 如果一个指针变量指向了某个普通变量，则*指针变量 就完全等价于 该普通变量</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">指针变量也是变量，只不过它存放的不能是内存单元的内容，只能存放内存单元的地址</span><br><span class="line">普通变量前不能加*</span><br><span class="line">常量和表达式前不能加&amp;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># include &lt;stdio.h&gt;</span><br><span class="line">void f(int i) </span><br><span class="line">&#123;</span><br><span class="line">	*p = 100;</span><br><span class="line">&#125;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	int i = 9;</span><br><span class="line">	f(i);</span><br><span class="line">	printf(&quot;i = %d\n&quot;, i);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">//最后输出结果为9，因为局部变量只能在本函数内部使用。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># include &lt;stdio.h&gt;</span><br><span class="line">void f(int * p) //不是定义了一个名字叫做*p的形参, 而是定义了一个形参，该形参名字叫做p,它的类型是int *</span><br><span class="line">&#123;</span><br><span class="line">	*p = 100; //i的地址发送给p，*p就是i，即100赋给i，i变成了100</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	int i = 9;</span><br><span class="line">	f(&amp;i);</span><br><span class="line">	printf(&quot;i = %d\n&quot;, i);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;	</span><br><span class="line">最后输出结果为100</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">总结：</span><br><span class="line">如何通过被调函数修改主调函数中普通变量的值：</span><br><span class="line"></span><br><span class="line"> Ⅰ 实参为相关变量的地址 &amp;i</span><br><span class="line"> Ⅱ 形参为以该变量的类型为类型的指针变量 int * p</span><br><span class="line"> Ⅲ 在被调函数中通过 *形参变量名 的方式就可以修改主函数相关变量的值 *p = 100</span><br></pre></td></tr></table></figure>
+
+<p>2.3 指针和数组的关系</p>
+<p>指针和一维数组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">数组名  </span><br><span class="line">    一维数组名是个指针常量，  </span><br><span class="line">    它存放的是一维数组第一个元素的地址， </span><br><span class="line">    它的值不能被改变  </span><br><span class="line">    一维数组名指向的是数组的第一个元素，即a指向的是a[0]  </span><br><span class="line">下标和指针的关系  </span><br><span class="line">    a[i] &lt;&lt;==&gt;&gt; *(a+i)  </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">数组名  </span><br><span class="line">    一维数组名是个指针常量，  </span><br><span class="line">    它存放的是一维数组第一个元素的地址， </span><br><span class="line">    它的值不能被改变  </span><br><span class="line">    一维数组名指向的是数组的第一个元素，即a指向的是a[0]  </span><br><span class="line">下标和指针的关系  </span><br><span class="line">    a[i] &lt;&lt;==&gt;&gt; *(a+i)  </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># include &lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int a[5] = &#123;1,2,3,4,5&#125;;</span><br><span class="line">    //a[3] == *(3+a);</span><br><span class="line">    printf(&quot;%p\n&quot;, a+1);</span><br><span class="line">    printf(&quot;%p\n&quot;, a+2);</span><br><span class="line">    printf(&quot;%d\n&quot;, *a+3); //*a+3等价于 a[0]+3</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">假设指针变量的名字为p</span><br><span class="line">则p+i的值是p+i*(p所指向的变量所占的字节数)</span><br><span class="line"></span><br><span class="line">指针变量的运算</span><br><span class="line">指针变量不能相加，不能相乘，不能相除</span><br><span class="line">如果两指针变量属于同一数组，则可以相减</span><br><span class="line">指针变量可以加减一整数，前提是最终结果不能超过指针允许指向的范围</span><br><span class="line">p+i的值是p+i*(p所指向的变量所占的字节数)</span><br><span class="line">p-i的值是p-i*(p所指向的变量所占的字节数)</span><br><span class="line">p++ &lt;==&gt; p+1</span><br><span class="line">p-- &lt;==&gt; p-1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">如何通过被调函数修改主调函数中一维数组的内容【如何界定一维数组】</span><br><span class="line">    两个参数</span><br><span class="line">        存放数组首元素的指针变量</span><br><span class="line">        存放数组元素长度的整型变量</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># include &lt;stdio.h&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    double * p;</span><br><span class="line">    double x = 66.6;</span><br><span class="line"></span><br><span class="line">    p = &amp;x;  //x占8个子节 1个字节是8位, 1个子节一个地址</span><br><span class="line"></span><br><span class="line">    double arr[3] = &#123;1.1, 2.2, 3.3&#125;;</span><br><span class="line">    double * q;</span><br><span class="line"></span><br><span class="line">    q = &amp;arr[0];</span><br><span class="line">    printf(&quot;%p\n&quot;, q);  //%p实际就是以十六进制输出</span><br><span class="line">    q = &amp;arr[1];</span><br><span class="line">    printf(&quot;%p\n&quot;, q);  </span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">//输出：0012FF5C 00122FF64 C=12 5C+8=64</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">通过函数修改实参的值</span><br><span class="line">要想修改一个变量的值，如果函数没有返回值，只能在函数中放入地址用指针：</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># include &lt;stdio.h&gt;</span><br><span class="line">void f(int * p);//前置声明</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int i = 10;</span><br><span class="line"></span><br><span class="line">    f(&amp;i);</span><br><span class="line">    printf(&quot;i = %d\n&quot;, i);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void f(int * p)</span><br><span class="line">&#123;</span><br><span class="line">    *p = 99;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> ** q)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">9</span>;</span><br><span class="line">    <span class="keyword">int</span> * p = &amp;i;<span class="comment">// int  *p;  p = &amp;i;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, p);</span><br><span class="line">    f(&amp;p);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>, p);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//p是int *类型，则&amp;p是int **类型，指针的指针。把p的地址发送给q，*q=p</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> ** q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    *q = (<span class="keyword">int</span> *)<span class="number">0xFFFFFFFF</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.4 结构体</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">为什么会出现结构体</span><br><span class="line">		为了表示一些复杂的数据，而普通的基本类型变量无法满足要求</span><br><span class="line">	</span><br><span class="line">什么叫结构体</span><br><span class="line">		结构体是用户根据实际需要自己定义的复合数据类型</span><br><span class="line">        结构体相当于java中的类，但是里面没有方法</span><br><span class="line">	</span><br><span class="line">如何使用结构体</span><br><span class="line">		两种方式：</span><br><span class="line">			struct Student st = &#123;1000, &quot;zhangsan&quot;, 20&#125;</span><br><span class="line">			struct Student * pst = &amp;st;</span><br><span class="line">			</span><br><span class="line">			1.</span><br><span class="line">				st.sid</span><br><span class="line">			2.</span><br><span class="line">			 	pst-&gt;sid</span><br><span class="line">			 	表示pst所指向的结构体变量中的sid这个成员</span><br></pre></td></tr></table></figure>
+
+<p>使用结构体变量的第一种方式：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span>	</span><br><span class="line">	<span class="keyword">int</span> sid;</span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">200</span>];</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">&#125;; <span class="comment">//分号不能省</span></span><br><span class="line"><span class="comment">//定义了一个新的数据类型，叫struct Student，里面有三个成员sid，name，age</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Student</span> <span class="title">st</span> =</span> &#123;<span class="number">1000</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="number">20</span>&#125;;</span><br><span class="line">	<span class="comment">//用struct Student数据类型定义了一个名为st的新变量。</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d  %s  %d\n&quot;</span>, st.sid, st.name, st.age);</span><br><span class="line"></span><br><span class="line">	st.sid = <span class="number">99</span>;</span><br><span class="line">	<span class="comment">//st.name = &quot;lisi&quot;;  //error，只有java能这样写</span></span><br><span class="line">	<span class="built_in">strcpy</span>(st.name, <span class="string">&quot;lisi&quot;</span>);</span><br><span class="line">	st.age = <span class="number">22</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d  %s  %d\n&quot;</span>, st.sid, st.name, st.age);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//printf(&quot;%d %s %d\n&quot;, st);  //error</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;    	</span><br></pre></td></tr></table></figure>
+
+<p>2.5 动态内存分配和释放</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用malloc分配的就是动态内存，不使用的就是静态内存。动态分配的内存一定要手动释放，否则造成内存泄漏。</span><br></pre></td></tr></table></figure>
+
+<p>动态内存的分配和释放</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int *p	= (int *) malloc(int len)</span><br><span class="line">1、 malloc只有一个int型的形参，表示要求系统分配的字节数；</span><br><span class="line">2、 malloc 函数的功能是请求系统 len 个字节的空间，如果请求分配成功，返回第一个字节的地址，如果分配不成功，则返回NULL</span><br><span class="line">3、 malloc 函数有且只能第一个字节的地址，所以我们需要把这个无任何实际意义的第一个字节的地址（俗称干地址）转化为第一个有实际意义的地址，因此malloc前面必须加（数据类型 *），表示把这个无实际意义的第一个字节的地址转化为相应类型的地址：如 int p* = (int*)malloc(50)	表示将系统分配好的50个字节的第一个字节的地址转化为int*类型，更准确的说是吧第一个字节的地址转化为4个字节的地址，这样p就指向了第一个的四个字节，P+1 指向第2个的四个字节，	p+i 指向第i个的四个字节。p[0]就是第一个元素，p[i]就是i+1个元素。</span><br><span class="line">再比如 double p* = (double *)malloc(80)表示将系统分配好的80个字节的地址转化为double *类型的地址，更准确的说把第一个地址转化为8个字节的地址，这样p就指向第一个8个字节，p[0]就是第一个元素，p[i]就是i+1个元素。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free(p)释放p所指向的内存，而不是释放p本身所占用的内存。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">4</span>, <span class="number">10</span>, <span class="number">2</span>, <span class="number">8</span>, <span class="number">6</span>&#125;;<span class="comment">//静态分配内存</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//用指针动态分配内存，模拟数组	</span></span><br><span class="line">	<span class="keyword">int</span> len;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入你需要分配的数组的长度: len = &quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;len);</span><br><span class="line">	<span class="keyword">int</span> * pArr = (<span class="keyword">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * len);</span><br><span class="line"><span class="comment">//sizeof(int)是整型的字节数，若len=5，则(sizeof(int) * len)=20，20表示malloc函数请求操作系统为程序分配20字节的空间。(int *)是强制转换，无论一个变量占几个字节，malloc函数只能返回第一个字节地址，这个地址是无意义地址（干地址），所以前面需要强制转换，告诉编译器第一个地址是什么类型（int or double……）的地址</span></span><br><span class="line"><span class="comment">//	*pArr = 4;  //类似于 a[0] = 4; </span></span><br><span class="line"><span class="comment">//	pArr[1] = 10; //类似于a[1] = 10;</span></span><br><span class="line"><span class="comment">//	printf(&quot;%d %d\n&quot;, *pArr, pArr[1]);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//我们可以把pArr当做一个普通数组来使用</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len; ++i)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;pArr[i]);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;len; ++i)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, *(pArr+i));</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	<span class="built_in">free</span>(pArr);  <span class="comment">//把pArr所代表的动态分配的20个字节的内存释放</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">指针的指针的使用 2) 动态内存分配与自动变量的内存分配。</span><br><span class="line">动态分配的内存必须调用free()函数才能释放，而自动变量一旦跳出它的代码作用范围，就会由编译器自动释放掉。</span><br><span class="line">让我们先看：</span><br><span class="line">A) 选项无论fun()中p的值如何变化，都不会影响到主函数中p的值，因为它是值传递</span><br><span class="line">B) 选项倒是把p的地址&amp;p传递给了fun()函数，但遗憾的是，由于s是个自动变量，当推出fun()函数后，s变量所占内存单元会被会被释放掉，此时主函数中的p还是没法指向一个合法的int型单元</span><br><span class="line">C) 选项fun()的形参 int **p;表明p是个指向指针变量的指针变量，即是个指针的指针。 而主函数中的 int *p; 表明p只是个指针变量，但&amp;p则指向了p，&amp;p也是个指向指针变量p的指针变量，实参和形参类型一致。 fun()的功能是使实参p指向了一个int型变量， 又由于该int型变量是由malloc()动态分配的，所以推出fun()函数并不会影响实参p的指向， 故C是对</span><br><span class="line">D) 选项犯了和A同样的错误。 真想不到二C还会考到这个知识，哈哈!</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;malloc.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> sid;</span><br><span class="line">	<span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">struct Student * <span class="title">CreateStudent</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShowStudent</span><span class="params">(struct Student *)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Student</span> * <span class="title">ps</span>;</span></span><br><span class="line"></span><br><span class="line">	ps = CreateStudent();</span><br><span class="line">	ShowStudent(ps);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShowStudent</span><span class="params">(struct Student * pst)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>, pst-&gt;sid, pst-&gt;age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">struct Student * <span class="title">CreateStudent</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Student</span> * <span class="title">p</span> =</span> (struct Student *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct Student));</span><br><span class="line">	p-&gt;sid = <span class="number">99</span>;</span><br><span class="line">	p-&gt;age = <span class="number">88</span>;</span><br><span class="line">	<span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出99 88</span></span><br></pre></td></tr></table></figure>
+
+
+            
+
+
+
+                <!-- 如果开启评论功能 -->
+                
+                    <hr>
+                    
+
+                    
+
+
+                    
+
+                    
+
+                
+            </div>
+
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">Tags</a></h5>
+    <div class="tags">
+        
+            
+            <a href="/tags/#English_words" title="English_words" rel="1">English_words</a>
+            
+        
+            
+            <a href="/tags/#web前端" title="web前端" rel="6">web前端</a>
+            
+        
+            
+            <a href="/tags/#个人博客" title="个人博客" rel="1">个人博客</a>
+            
+        
+            
+            <a href="/tags/#markdown" title="markdown" rel="1">markdown</a>
+            
+        
+            
+            <a href="/tags/#web服务器" title="web服务器" rel="1">web服务器</a>
+            
+        
+            
+            <a href="/tags/#数据库查询语言" title="数据库查询语言" rel="1">数据库查询语言</a>
+            
+        
+            
+            <a href="/tags/#python" title="python" rel="3">python</a>
+            
+        
+            
+            <a href="/tags/#Python" title="Python" rel="1">Python</a>
+            
+        
+            
+            <a href="/tags/#this" title="this" rel="1">this</a>
+            
+        
+            
+            <a href="/tags/#预编译" title="预编译" rel="1">预编译</a>
+            
+        
+            
+            <a href="/tags/#奇思妙想" title="奇思妙想" rel="1">奇思妙想</a>
+            
+        
+            
+            <a href="/tags/#Java基本语法" title="Java基本语法" rel="1">Java基本语法</a>
+            
+        
+            
+            <a href="/tags/#Sring" title="Sring" rel="1">Sring</a>
+            
+        
+            
+            <a href="/tags/#Java" title="Java" rel="1">Java</a>
+            
+        
+            
+            <a href="/tags/#Java数组" title="Java数组" rel="1">Java数组</a>
+            
+        
+            
+            <a href="/tags/#移动端app" title="移动端app" rel="1">移动端app</a>
+            
+        
+            
+            <a href="/tags/#继承" title="继承" rel="1">继承</a>
+            
+        
+            
+            <a href="/tags/#音节练习" title="音节练习" rel="1">音节练习</a>
+            
+        
+            
+            <a href="/tags/#并发编程" title="并发编程" rel="1">并发编程</a>
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">About me</a></h5>
+    <div class="short-about">
+
+        
+            <img id = "avatar_pic" src="/img/avatar/logo.png" />
+        
+
+        
+            <p>INNOVATION IS KING!</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
+
+            
+
+            
+
+            
+                <li>
+                    <a target="_blank"  href="https://github.com/kinggozhang">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+            
+            
+            
+        </ul>
+    </div>
+</section>
+
+        <hr>
+    
+        
+  <h5>Recent posts</h3>
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/adsdjsf">adsdjsf</a>
+        </li>
+      
+        <li>
+          <a href="/2022/04/12/%E8%87%AA%E9%80%82%E5%BA%94%E5%92%8C%E5%93%8D%E5%BA%94%E5%BC%8F/">自适应和响应式</a>
+        </li>
+      
+        <li>
+          <a href="/2022/04/12/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">浏览器的工作原理</a>
+        </li>
+      
+        <li>
+          <a href="/2022/04/10/%E8%88%8C%E5%89%8D%E9%9F%B3%E8%8A%82%E7%BB%83%E4%B9%A0/">舌前音节练习</a>
+        </li>
+      
+        <li>
+          <a href="/2022/03/22/%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82js%E9%A2%84%E7%BC%96%E8%AF%91/">一文搞懂js预编译</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        <hr>
+    
+        
+    <h5>Achives</h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">13</span></li></ul>
+    </div>
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5>Friends</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="http://www.sumoon.com" target="_blank">ACE theme</a></li>
+    
+</ul>
+
+
+        <hr>
+    
+</div>
+
+
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/kinggozhang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 雍正专职八阿哥 2022 
+                    <br>
+                    Powered by <a target="_blank" rel="noopener" href="http://www.hexo.io">Hexo</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Theme by <a target="_blank" rel="noopener" href="https://github.com/kinggozhang/hexo-theme-ace">ACE</a> 
+					
+					
+					<i class="fa fa-eye" id="leancounter"></i>
+					
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+   
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+
+<!-- Bootstrap Core JavaScript -->
+
+   
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://pyofgavin.github.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E3%80%90%E4%B8%80%E3%80%91/index.html/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://pyofgavin.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
