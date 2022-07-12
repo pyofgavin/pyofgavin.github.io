@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"pyofgavin.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="this调用基本方法 当前类中的属性：this.属性； 当前类中的方法（普通方法、构造方法）：this()、this.方法名称()； 描述当前对象；  this.属性名称访问本类中的属性 1234567891011121314151617181920class Person&amp;#123;&#x2F;&#x2F;一个类	private String name; &#x2F;&#x2F;类的属性	private int age; &#x2F;&#x2F;类的属性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="this关键字的使用">
+<meta property="og:url" content="https://pyofgavin.github.io/2021/11/08/this%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="curry_gavin@163.com">
+<meta property="og:description" content="this调用基本方法 当前类中的属性：this.属性； 当前类中的方法（普通方法、构造方法）：this()、this.方法名称()； 描述当前对象；  this.属性名称访问本类中的属性 1234567891011121314151617181920class Person&amp;#123;&#x2F;&#x2F;一个类	private String name; &#x2F;&#x2F;类的属性	private int age; &#x2F;&#x2F;类的属性">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-08T10:53:21.000Z">
+<meta property="article:modified_time" content="2021-11-09T10:03:36.554Z">
+<meta property="article:author" content="雍正专职八阿哥">
+<meta property="article:tag" content="this">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://pyofgavin.github.io/2021/11/08/this%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>this关键字的使用 | curry_gavin@163.com</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">curry_gavin@163.com</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pyofgavin.github.io/2021/11/08/this%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="雍正专职八阿哥">
+      <meta itemprop="description" content="love, passion, concentrate ">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="curry_gavin@163.com">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          this关键字的使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-11-08 18:53:21" itemprop="dateCreated datePublished" datetime="2021-11-08T18:53:21+08:00">2021-11-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-11-09 18:03:36" itemprop="dateModified" datetime="2021-11-09T18:03:36+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">Java基础语法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="this调用基本方法"><a href="#this调用基本方法" class="headerlink" title="this调用基本方法"></a>this调用基本方法</h3><ol>
+<li>当前类中的属性：this.属性；</li>
+<li>当前类中的方法（普通方法、构造方法）：this()、this.方法名称()；</li>
+<li>描述当前对象；</li>
+</ol>
+<p>this.属性名称访问本类中的属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;//一个类</span><br><span class="line">	private String name; //类的属性</span><br><span class="line">	private int age; //类的属性</span><br><span class="line">	public Person(String name,int age)&#123; //构造方法，参数名称不哈为</span><br><span class="line">		this.name=name;    //this.属性名称访问类中属性</span><br><span class="line">		this.age=age;     //this.属性名称访问类中属性</span><br><span class="line">	&#125;</span><br><span class="line">	public void tell()&#123;</span><br><span class="line">		System.out.println(&quot;姓名：&quot;+name+&quot;、年龄：&quot;+age);</span><br><span class="line">	&#125;</span><br><span class="line">	//setter、getter略</span><br><span class="line">&#125;</span><br><span class="line">public class Dir&#123;   //主类</span><br><span class="line">public static void main(String[] args) </span><br><span class="line">	&#123;</span><br><span class="line">		Person per =new Person(&quot;王五&quot;,38);</span><br><span class="line">		per.tell();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>构造方法调用this()<br>普通方法调用this.方法名称()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;//一个类</span><br><span class="line">	private String name; //类的属性</span><br><span class="line">	private int age; //类的属性</span><br><span class="line">	public Person(String name,int age)&#123; //构造方法</span><br><span class="line">		this.setName(name);    //this.方法名称调用类中普通方法</span><br><span class="line">		this.setAge(age);     //this.方法名称调用类中普通方法</span><br><span class="line">	&#125;</span><br><span class="line">	public void tell()&#123;</span><br><span class="line">		System.out.println(&quot;姓名：&quot;+name+&quot;、年龄：&quot;+age);</span><br><span class="line">	&#125;</span><br><span class="line">	public void setName(String name)&#123;</span><br><span class="line">		this.name=name;</span><br><span class="line">	&#125;</span><br><span class="line">	public void setAge(int age)&#123;</span><br><span class="line">		this.age=age;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getName()&#123;</span><br><span class="line">		return this.name;</span><br><span class="line">	&#125;</span><br><span class="line">	public int getAge()&#123;</span><br><span class="line">		return this.age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Dir&#123;   //主类</span><br><span class="line">public static void main(String[] args) </span><br><span class="line">	&#123;</span><br><span class="line">		Person per =new Person(&quot;王五&quot;,38);</span><br><span class="line">		per.tell();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>三参构造，代码有大量重复，可以利用this()优化代码</p>
+<p>优化前：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">class Emp&#123;//一个类</span><br><span class="line">	private long empno;   //员工编号</span><br><span class="line">	private String ename;  //员工姓名</span><br><span class="line">	private String dept;  //员工部门</span><br><span class="line">	private double salary;  //基本工资</span><br><span class="line">	//定个4个构造</span><br><span class="line">	public Emp()&#123; //无参构造</span><br><span class="line">		this.empno=10000;</span><br><span class="line">		this.ename=&quot;无名氏&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	public Emp(long empno)&#123;//单参构造</span><br><span class="line">		this.empno=empno;</span><br><span class="line">	    this.ename=&quot;新员工&quot;;</span><br><span class="line">		this.dept=&quot;未定&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	public Emp(long empno,String ename,String dept)&#123;//三参构造</span><br><span class="line">		this.empno=empno;</span><br><span class="line">		this.ename=ename;</span><br><span class="line">		this.dept=dept;</span><br><span class="line">		this.salary=5600;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo()&#123;</span><br><span class="line">		return &quot;员工编号：&quot;+this.empno +</span><br><span class="line">			&quot;、员工姓名：&quot;+this.ename+</span><br><span class="line">			&quot;、员工部门：&quot;+this.dept+</span><br><span class="line">			&quot;、基本工资：&quot;+this.salary;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">public class Dir&#123;   //主类</span><br><span class="line">public static void main(String[] args) </span><br><span class="line">	&#123;</span><br><span class="line">		Emp emp =new Emp(5655L,&quot;王五&quot;,&quot;市场部&quot;);</span><br><span class="line">		System.out.println(emp.getInfo());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>this()优化后：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">class Emp&#123;//一个类</span><br><span class="line">	private long empno;   //员工编号</span><br><span class="line">	private String ename;  //员工姓名</span><br><span class="line">	private String dept;  //员工部门</span><br><span class="line">	private double salary;  //基本工资</span><br><span class="line">	//定个4个构造</span><br><span class="line">	public Emp()&#123; //无参构造</span><br><span class="line">		this(1000,&quot;无名氏&quot;,null,0.0);//等价于以下两行代码</span><br><span class="line">		//this.empno=10000;ja</span><br><span class="line">		//this.ename=&quot;无名氏&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	public Emp(long empno)&#123;//单参构造</span><br><span class="line">		this(empno,&quot;新员工&quot;,&quot;未定&quot;,0.0);//等价于以下三行代码</span><br><span class="line">		//this.empno=empno;</span><br><span class="line">	    //this.ename=&quot;新员工&quot;;</span><br><span class="line">		//this.dept=&quot;未定&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	public Emp(long empno,String ename,String dept)&#123;//三参构造</span><br><span class="line">		this(empno,ename,dept,5688.00);//等价于以下三行代码</span><br><span class="line">		//this.empno=empno;</span><br><span class="line">		//this.ename=ename;</span><br><span class="line">		//this.dept=dept;</span><br><span class="line">		//this.salary=5600;</span><br><span class="line">	&#125;</span><br><span class="line">	public Emp(long empno,String ename,String dept,double salary)&#123;//四参构造</span><br><span class="line">		this.empno=empno;</span><br><span class="line">		this.ename=ename;</span><br><span class="line">		this.dept=dept;</span><br><span class="line">		this.salary=salary;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo()&#123;</span><br><span class="line">		return &quot;员工编号：&quot;+this.empno +</span><br><span class="line">			&quot;、员工姓名：&quot;+this.ename+</span><br><span class="line">			&quot;、员工部门：&quot;+this.dept+</span><br><span class="line">			&quot;、基本工资：&quot;+this.salary;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">public class Dir&#123;   //主类</span><br><span class="line">public static void main(String[] args) </span><br><span class="line">	&#123;</span><br><span class="line">		Emp emp =new Emp(5655L,&quot;王五&quot;,&quot;市场部&quot;);</span><br><span class="line">		System.out.println(emp.getInfo());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="this表示当前对象"><a href="#this表示当前对象" class="headerlink" title="this表示当前对象"></a>this表示当前对象</h3><p>一个类可以实例化出若干个对象，这些对象都可以调用类中的方法</p>
+<h3 id="简单java类代码"><a href="#简单java类代码" class="headerlink" title="简单java类代码"></a>简单java类代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">class Dept&#123;</span><br><span class="line">	private long deptno;</span><br><span class="line">	private String dname;</span><br><span class="line">	private String loc;</span><br><span class="line">	private Dept()&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	public Dept(long deptno,String dname,String loc)&#123;</span><br><span class="line">		this.deptno=deptno;</span><br><span class="line">		this.dname=dname;</span><br><span class="line">		this.loc=loc;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getInfo()&#123;</span><br><span class="line">		return &quot;部门编号&quot;+this.deptno+&quot;部门名称&quot;+this.dname+&quot;部门位置&quot;+this.loc;</span><br><span class="line">	&#125;</span><br><span class="line">   public void setDeptno(long deptno)&#123;</span><br><span class="line">	this.deptno=deptno;</span><br><span class="line">   &#125;</span><br><span class="line">   public void setDname(String dname)&#123;</span><br><span class="line">	this.dname=dname;</span><br><span class="line">   &#125;</span><br><span class="line">   public void setLoc(String loc)&#123;</span><br><span class="line">	this.loc=loc;</span><br><span class="line">   &#125;</span><br><span class="line">   public String getDname()&#123;</span><br><span class="line">	     return this.dname;</span><br><span class="line">   &#125;</span><br><span class="line">  public long getDeptno()&#123;</span><br><span class="line">	return this.deptno;</span><br><span class="line">  &#125;</span><br><span class="line">  public String getLoc()&#123;</span><br><span class="line">	return this.loc;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Demo </span><br><span class="line">&#123;</span><br><span class="line">	public static void main(String[] args) </span><br><span class="line">	&#123;</span><br><span class="line">		Dept dept = new Dept(1000,&quot;技术部&quot;,&quot;南京市&quot;);</span><br><span class="line">      System.out.println(dept.getInfo());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="单独创建一个static"><a href="#单独创建一个static" class="headerlink" title="单独创建一个static"></a>单独创建一个static</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Book &#123;</span><br><span class="line">	private String title;</span><br><span class="line">	private static int count =0;</span><br><span class="line">	public Book(String title)&#123;</span><br><span class="line">		this.title = title;</span><br><span class="line">		count ++;</span><br><span class="line">		System.out.println(&quot;第&quot;+ count +&quot;本图书创建出来；&quot;);</span><br><span class="line">	&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">public class Demo </span><br><span class="line">&#123;</span><br><span class="line">	public static void main(String[] args) </span><br><span class="line">	&#123;</span><br><span class="line">		new Book(&quot;Java&quot;); new Book (&quot;JSP&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">结果：</span><br><span class="line">第1本图书创建出来；</span><br><span class="line">第2本图书创建出来；</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Book &#123;</span><br><span class="line">	private String title;</span><br><span class="line">	private static int count =0;</span><br><span class="line">	public Book()&#123;  //无参构造</span><br><span class="line">		this(&quot;NUTITLE--&quot; +count++);</span><br><span class="line">	&#125;</span><br><span class="line">	public Book(String title)&#123;</span><br><span class="line">		this.title = title;</span><br><span class="line">		//System.out.println(&quot;第&quot;+ count +&quot;本图书创建出来；&quot;);</span><br><span class="line">	&#125;	</span><br><span class="line">	public String getTitle()&#123;</span><br><span class="line">		return this.title;</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">public class Demo </span><br><span class="line">&#123;</span><br><span class="line">	public static void main(String[] args) </span><br><span class="line">	&#123;</span><br><span class="line">		System.out.println(new Book(&quot;Java&quot;).getTitle());</span><br><span class="line">		System.out.println(new Book(&quot;JSP&quot;).getTitle());</span><br><span class="line">		System.out.println(new Book(&quot;Spring&quot;).getTitle());</span><br><span class="line">		System.out.println(new Book().getTitle());</span><br><span class="line">		System.out.println(new Book().getTitle());</span><br><span class="line">	&#125;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/this/" rel="tag"># this</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/08/random%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" rel="prev" title="random基础语法">
+      <i class="fa fa-chevron-left"></i> random基础语法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/09/%E6%95%B0%E7%BB%84%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" rel="next" title="数组的基本操作">
+      数组的基本操作 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#this%E8%B0%83%E7%94%A8%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">this调用基本方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this%E8%A1%A8%E7%A4%BA%E5%BD%93%E5%89%8D%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.</span> <span class="nav-text">this表示当前对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95java%E7%B1%BB%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">简单java类代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E7%8B%AC%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAstatic"><span class="nav-number">4.</span> <span class="nav-text">单独创建一个static</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">雍正专职八阿哥</p>
+  <div class="site-description" itemprop="description">love, passion, concentrate </div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">雍正专职八阿哥</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
