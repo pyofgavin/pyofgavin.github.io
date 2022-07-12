@@ -302,7 +302,7 @@
 <p>16、display:none  与 visibility:hidden</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、占用位置的区别：</span><br><span class="line"><span class="attr">display</span>:不占用位置  visibility占用位置 虽然不可见 但是元素的位置在那里 </span><br><span class="line"><span class="number">2</span>、重绘和回流</span><br><span class="line">visibility：hidden 、display:none 产生重绘</span><br><span class="line"><span class="attr">dispaly</span>:none 还产生了一次回流</span><br><span class="line">产生回流一定会造成重绘，但是重绘不一定造成回流</span><br><span class="line">回流：改变元素的位置 显示隐藏的元素</span><br><span class="line">重绘：样式改变 背景色</span><br></pre></td></tr></table></figure>
 
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219214842827.png" alt="image-20220219214842827"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219214842827.png" alt="image-20220219214842827"></p>
 <p>17、opacity 和 rgba区别</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、opacity 取值范围 0到1之间 0表示完全透明  1表示不透明</span><br><span class="line">2、rgba：a表示透明度  0到1之间rgba()</span><br><span class="line">区别：opacity会继承父元素的opacity  而rgba设置的后代元素 不会继承不透明属性</span><br></pre></td></tr></table></figure>
 
@@ -321,8 +321,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">比较的判断：</span><br><span class="line">==相等：只比较值 包含隐式类型转化 </span><br><span class="line">===绝对相等：除了比较值 还比较数据类型</span><br><span class="line">null == undefined  true</span><br><span class="line">string == number 发生隐式类型转化 </span><br><span class="line">boolean == bumber  boolean为真时转化为1 为假时转化为 0 </span><br><span class="line">隐式转化是通过自动调用Object.ValueOf()函数 返回一个数值</span><br></pre></td></tr></table></figure>
 
 <p>5、JS微任务和宏任务？</p>
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219233832198.png" alt="image-20220219233832198"></p>
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219233916897.png" alt="image-20220219233916897"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219233832198.png" alt="image-20220219233832198"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219233916897.png" alt="image-20220219233916897"></p>
 <p>6、JS作用域(占80%)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">规则：除了函数之外，js没有块级作用域的</span><br><span class="line">     作用域链：内部可以访问外部的变量 外部访问不了内部的变量</span><br><span class="line">     		如果内部有变量 优先访问内部的 内部没有 才会去找外部的 沿着作用域链去找</span><br><span class="line">     		声名变量没有写 <span class="keyword">var</span>去声名 是全局变量 <span class="built_in">window</span>.b GA <span class="built_in">global</span> Action</span><br><span class="line">     		<span class="keyword">var</span>声名 会提升</span><br></pre></td></tr></table></figure>
 
@@ -519,20 +519,20 @@
 <p>33、什么是MVVM？MVC MVP MVVM的理解？</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222234255569.png" alt="web1.0时代"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222234255569.png" alt="web1.0时代"></p>
 <p>​                                                                                                    web1.0时代</p>
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222234454147.png" alt="image-20220222234454147"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222234454147.png" alt="image-20220222234454147"></p>
 <p>​                                                                                    web2.0时代MVC分层架构 </p>
 <p>​                                                                web2.0时代 ajax出现之后 前后端分离 前端通过ajax与后端数据交互 服务端压力减少 用户                                            体验提升 支持局部刷新 Jquery库的出现 操作DOM</p>
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235006590.png" alt="image-20220222235006590"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235006590.png" alt="image-20220222235006590"></p>
 <p>​                                                                        前端MVC view  controlle r model</p>
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235508533.png" alt="image-20220222235508533"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235508533.png" alt="image-20220222235508533"></p>
 <p>​                                                                            前端MVP model view presenter(中间人)</p>
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235554968.png" alt="image-20220222235554968"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235554968.png" alt="image-20220222235554968"></p>
 <p>​                                                                        MVVM   model   view    viewModel(数据双向绑定)</p>
 <p>​                                                                        viewModel自动将数据变化转化为视图更新</p>
 <p>​                                                                        数据驱动视图</p>
-<p><img data-src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235932950.png" alt="image-20220222235932950"></p>
+<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235932950.png" alt="image-20220222235932950"></p>
 <p>这三个框架反应了web领域的发展进展，为了减少视图层和数据层的耦合问题</p>
 <p>节流阀和防抖</p>
 <p>节流：高频事件触发，n秒内只会执行一次，节流阀会稀释函数的执行频率</p>
