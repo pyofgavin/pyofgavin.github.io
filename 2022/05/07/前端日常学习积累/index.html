@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          
+        
+    </title>
+
+    <link rel="canonical" href="https://pyofgavin.github.io/2022/05/07/前端日常学习积累/">
+
+    <!-- Bootstrap Core CSS -->
+
+   
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    
+
+    <!-- Custom CSS --> 
+    
+<link rel="stylesheet" href="/css/beantech.min.css">
+
+
+    
+<link rel="stylesheet" href="/css/donate.css">
+
+	
+<link rel="stylesheet" href="/css/w3.css">
+
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/toc.css">
+
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+    }
+   .post-heading{
+    padding:20px;
+    }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+
+</style>
+
+<header id="headerid" class="w3-indigo intro-header" style="position:relative;">
+    <!-- Signature -->
+	
+        <div class="container">
+            <div class=" row" >
+			
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="z-index:2;">
+                
+                    <div class="post-heading" style="padding:40px">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1></h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by gavin on
+                            2022-05-07
+                        </span>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+  
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a  href="/">Homepage</a>
+                    </li>
+		    
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">技术</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">热爱</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">生活</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">工作</a>
+                           
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+           
+                            <a  href="#">奉献</a>
+                           
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="获取style的值"><a href="#获取style的值" class="headerlink" title="获取style的值"></a>获取style的值</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 基本语法</span><br><span class="line">getComputedStyle(document.getElementById(&#x27;caseroul&#x27;),null).getPropertyValue(‘left’)</span><br></pre></td></tr></table></figure>
+
+<p>参考文档：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/533526c9f755">https://www.jianshu.com/p/533526c9f755</a></p>
+<h1 id="click修饰符的用法"><a href="#click修饰符的用法" class="headerlink" title="click修饰符的用法"></a>click修饰符的用法</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-<span class="keyword">for</span>=<span class="string">&quot;(item, index) in 10&quot;</span> :key=<span class="string">&quot;index&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;card&quot;</span> @click=<span class="string">&quot;clickParent(item,index)&quot;</span>&gt;</span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-con&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span>&gt;</span>企业名称<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span>&gt;</span>杭州大厦<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-con&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span>&gt;</span>财政划片<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span>&gt;</span>小河<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-con&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span>&gt;</span>注册地址<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span>&gt;</span>小河街道20号<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">   <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-con&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span>&gt;</span>操作<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;<span class="name">div</span> @<span class="attr">click.stop</span>=<span class="string">&quot;clickChild&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color:#3096FA&quot;</span>&gt;</span>入驻 | <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">       <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color:#EE0A24&quot;</span>&gt;</span> 搬出 <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"> &lt;/div&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">clickParent</span>(<span class="params">item,index</span>)</span>&#123;</span><br><span class="line">   alert(<span class="string">&#x27;父元素&#x27;</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">clickChild</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;子元素&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 阻止单击事件继续传播 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop</span>=<span class="string">&quot;doThis&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;!-- 提交事件不再重载页面 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>=<span class="string">&quot;onSubmit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;!-- 修饰符可以串联 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-on:click.stop.prevent</span>=<span class="string">&quot;doThat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;!-- 只有修饰符 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span> <span class="attr">v-on:submit.prevent</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;!-- 添加事件监听器时使用事件捕获模式 --&gt;</span><br><span class="line">&lt;!-- 即内部元素触发的事件先在此处理，然后才交由内部元素进行处理 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.capture</span>=<span class="string">&quot;doThis&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;!-- 只当在 event.target 是当前元素自身时触发处理函数 --&gt;</span><br><span class="line">&lt;!-- 即事件不是从内部元素触发的 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click.self</span>=<span class="string">&quot;doThat&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>参考文档：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45846359/article/details/123787079">https://blog.csdn.net/qq_45846359/article/details/123787079</a></p>
+<h1 id="echart配置"><a href="#echart配置" class="headerlink" title="echart配置"></a>echart配置</h1><h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span> = <span class="string">&quot;d1&quot;</span> <span class="attr">style</span> = <span class="string">&quot;width: 400px;height:400px;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span> = <span class="string">&quot;js/echarts.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">var</span> myChart = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">&quot;d1&quot;</span>));<span class="comment">//初始化画布</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">var</span> option = &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">title</span>:&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">show</span>:<span class="string">&quot;true&quot;</span>,<span class="comment">//是否显示标题，默认显示，可以不设置</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">text</span>:<span class="string">&quot;echarts实例&quot;</span>,<span class="comment">//图表标题文本内容</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">link</span>:<span class="string">&quot;http://echarts.baidu.com/&quot;</span>,<span class="comment">//点击标题内容要跳转的链接</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">target</span>:<span class="string">&quot;blank&quot;</span>,<span class="comment">//跳转链接打开方式，blank是新窗口打开，self是自身窗口打开，跟a标签一样</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">textStyle</span>:&#123;<span class="comment">//标题内容的样式</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">color</span>:<span class="string">&#x27;#e4393c&#x27;</span>,<span class="comment">//京东红</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontStyle</span>:<span class="string">&#x27;normal&#x27;</span>,<span class="comment">//主标题文字字体风格，默认normal，有italic(斜体),oblique(斜体)</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontWeight</span>:<span class="string">&quot;lighter&quot;</span>,<span class="comment">//可选normal(正常)，bold(加粗)，bolder(加粗)，lighter(变细)，100|200|300|400|500...</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontFamily</span>:<span class="string">&quot;san-serif&quot;</span>,<span class="comment">//主题文字字体，默认微软雅黑</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontSize</span>:<span class="number">18</span><span class="comment">//主题文字字体大小，默认为18px</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">textAlign</span>:<span class="string">&#x27;left&#x27;</span>,<span class="comment">//标题文本水平对齐方式，建议不要设置，就让他默认，想居中显示的话，建议往下看</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">textBaseline</span>:<span class="string">&quot;top&quot;</span>,<span class="comment">//默认就好,垂直对齐方式,不要设置</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">subtext</span>:<span class="string">&quot;作者:前端林三哥&quot;</span>,<span class="comment">//主标题的副标题文本内容，如果需要副标题就配置这一项</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">sublink</span>:<span class="string">&quot;http://blog.csdn.net/zhaoxiang66&quot;</span>,<span class="comment">//点击副标题内容要跳转的链接</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">subtarget</span>:<span class="string">&quot;blank&quot;</span>,<span class="comment">//同主标题，blank是新窗口打开，self是自身窗口打开</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">subtextStyle</span>:&#123;<span class="comment">//副标题内容的样式</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">color</span>:<span class="string">&#x27;green&#x27;</span>,<span class="comment">//绿色</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontStyle</span>:<span class="string">&#x27;normal&#x27;</span>,<span class="comment">//主标题文字字体风格，默认normal，有italic(斜体),oblique(斜体)</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontWeight</span>:<span class="string">&quot;lighter&quot;</span>,<span class="comment">//可选normal(正常)，bold(加粗)，bolder(加粗)，lighter(变细)，100|200|300|400|500...</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontFamily</span>:<span class="string">&quot;san-serif&quot;</span>,<span class="comment">//主题文字字体，默认微软雅黑</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                    <span class="attr">fontSize</span>:<span class="number">12</span><span class="comment">//主题文字字体大小，默认为12px</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">padding</span>:<span class="number">5</span>,<span class="comment">//各个方向的内边距，默认是5，可以自行设置</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">itemGap</span>:<span class="number">10</span>,<span class="comment">//主标题和副标题之间的距离，可自行设置</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">left</span>:<span class="string">&quot;center&quot;</span>,<span class="comment">//left 的值可以是像 20 这样的具体像素值，可以是像 &#x27;20%&#x27; 这样相对于容器高宽的百分比，也可以是 &#x27;left&#x27;, &#x27;center&#x27;, &#x27;right&#x27;,如果 left 的值为&#x27;left&#x27;, &#x27;center&#x27;, &#x27;right&#x27;，组件会根据相应的位置自动对齐。</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">top</span>:<span class="string">&quot;center&quot;</span>,<span class="comment">//left 的值可以是像 20 这样的具体像素值，可以是像 &#x27;20%&#x27; 这样相对于容器高宽的百分比，也可以是 &#x27;left&#x27;, &#x27;center&#x27;, &#x27;right&#x27;,如果 left 的值为&#x27;left&#x27;, &#x27;center&#x27;, &#x27;right&#x27;，组件会根据相应的位置自动对齐。</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">right</span>:<span class="string">&quot;auto&quot;</span>,<span class="comment">//right 的值可以是像 20 这样的具体像素值，可以是像 &#x27;20%&#x27; 这样相对于容器高宽的百分比。</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">bottom</span>:<span class="string">&quot;auto&quot;</span>,<span class="comment">//bottom 的值可以是像 20 这样的具体像素值，可以是像 &#x27;20%&#x27; 这样相对于容器高宽的百分比。</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="comment">//left设置center标题会自动水平居中</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="comment">//top设置center标题会自动垂直居中</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">backgroundColor</span>:<span class="string">&quot;#ccc&quot;</span>,<span class="comment">//标题背景色，默认透明，颜色可以使用 RGB 表示，比如 &#x27;rgb(128, 128, 128)&#x27; ，如果想要加上 alpha 通道，可以使用 RGBA，比如 &#x27;rgba(128, 128, 128, 0.5)&#x27;，也可以使用十六进制格式，比如 &#x27;#ccc&#x27;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">borderColor</span>:<span class="string">&quot;red&quot;</span>,<span class="comment">//标题的边框颜色，颜色格式支持同backgroundColor</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">borderWidth</span>:<span class="number">2</span>,<span class="comment">//标题边框线宽，默认为0，可自行设置</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">shadowBlur</span>: <span class="number">10</span>,<span class="comment">//图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果。</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">shadowColor</span>: <span class="string">&quot;black&quot;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">shadowOffsetX</span>: <span class="number">0</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">                <span class="attr">shadowOffsetY</span>: <span class="number">0</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        myChart.setOption(option);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>修改windos.title  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docuement.title = &#x27;xxxxxx&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>文字一行显示 超出省略号显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">white-space: nowrap; </span><br><span class="line">overflow: hidden;</span><br><span class="line">text-overflow: ellipsis;</span><br></pre></td></tr></table></figure>
+
+<p>参考连接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51081257/article/details/121304822">https://blog.csdn.net/weixin_51081257/article/details/121304822</a></p>
+<p>模拟点击事件无效的解决方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dd =  <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.btn-list&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd.click()</span><br></pre></td></tr></table></figure>
+
+<p>vuex中使用 namespaced 命名要大写</p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2022/05/18/jquery入门/" data-toggle="tooltip" data-placement="top" title="">&larr; Previous post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2022/04/12/自适应和响应式/" data-toggle="tooltip" data-placement="top" title="自适应和响应式">Next post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+				
+            </div>
+
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">Tags</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://mail.163.com/js6/main.jsp?sid=FAHLMavcLgfpBrbXJRcchTMkWgOdGNTK#module=welcome.WelcomeModule%7C%7B%7D" target="_blank">my email</a></li>
+                    
+                        <li><a href="https://pyofgavin.github.io/" target="_blank">my blog</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/curry_gavin">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; gavin 2022 
+                    <br>
+                    Powered by <a target="_blank" rel="noopener" href="http://www.hexo.io">Hexo</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Theme by <a target="_blank" rel="noopener" href="https://github.com/kinggozhang/hexo-theme-ace">ACE</a> 
+					
+					
+					<i class="fa fa-eye" id="leancounter"></i>
+					
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+
+   
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+
+<!-- Bootstrap Core JavaScript -->
+
+   
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://pyofgavin.github.io/2022/05/07/%E5%89%8D%E7%AB%AF%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0%E7%A7%AF%E7%B4%AF/index.html/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://pyofgavin.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

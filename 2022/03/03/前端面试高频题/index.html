@@ -322,7 +322,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">BFC就是页面一个隔离的独立容器 容器内的元素不会影响到外面的元素，格式化上下文</span><br><span class="line">BFC的原则：如果一个元素具有BFC 那么内部元素再怎么动 不会影响到 外面的元素</span><br><span class="line">如何触发BFC：</span><br><span class="line">		float的值非none (会造成父元素的高度塌陷)</span><br><span class="line">		overflow的值非visible （最常用） hidden（会把溢出的内容不显示）auto scroll</span><br><span class="line">		display的值为：inline-block  table-cell table(把原来元素转为行内块元素，高度依然胡塌陷) [flow-root]存在兼容性问题</span><br><span class="line">		position的值为：absolute fixed</span><br><span class="line">BFC应用的场景：</span><br><span class="line">	margin塌陷</span><br><span class="line">    清楚浮动</span><br></pre></td></tr></table></figure>
 
 <p>*10、清楚浮动有哪些方式：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、触发BFC</span><br><span class="line">使用after伪类清楚浮动</span><br><span class="line">2、div:after&#123;</span><br><span class="line">	content:&#x27;&#x27;</span><br><span class="line">	dispaly:block</span><br><span class="line">	clear:both</span><br><span class="line">&#125;</span><br><span class="line">3、给父元素设置一个高 </span><br><span class="line">4、在父元素后面添加一个空标签  给该标签设置 clear:both</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、触发BFC</span><br><span class="line">使用after伪类清楚浮动</span><br><span class="line">2、div:after&#123;</span><br><span class="line">	content:&#x27;&#x27;</span><br><span class="line">	dispaly:block</span><br><span class="line">	clear:both</span><br><span class="line">&#125;</span><br><span class="line">3、给父元素设置一个高 或者 overflow:hidden</span><br><span class="line">4、在父元素后面添加一个空标签  给该标签设置 clear:both</span><br></pre></td></tr></table></figure>
 
 <p>11、在网页中的应该使用奇数 还是 偶数的字体？（1%）</p>
 <p>UI出示意图 前端开发 ，方便开发 设计的时候都是偶数 偶数让文字在浏览器上表现更好看 UI设计都是偶数 布局 转化为px也好 方便一点</p>
@@ -346,7 +346,7 @@
 <p>16、display:none  与 visibility:hidden</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、占用位置的区别：</span><br><span class="line"><span class="attr">display</span>:不占用位置  visibility占用位置 虽然不可见 但是元素的位置在那里 </span><br><span class="line"><span class="number">2</span>、重绘和回流</span><br><span class="line">visibility：hidden 、display:none 产生重绘</span><br><span class="line"><span class="attr">dispaly</span>:none 还产生了一次回流</span><br><span class="line">产生回流一定会造成重绘，但是重绘不一定造成回流</span><br><span class="line">回流：改变元素的位置 显示隐藏的元素</span><br><span class="line">重绘：样式改变 背景色</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219214842827.png" alt="image-20220219214842827"></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7CHfA"><img src="https://s1.ax1x.com/2022/07/19/j7CHfA.png" alt="j7CHfA.png"></a></p>
 <p>17、opacity 和 rgba区别</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、opacity 取值范围 0到1之间 0表示完全透明  1表示不透明</span><br><span class="line">2、rgba：a表示透明度  0到1之间rgba()</span><br><span class="line">区别：opacity会继承父元素的opacity  而rgba设置的后代元素 不会继承不透明属性</span><br></pre></td></tr></table></figure>
 
@@ -365,8 +365,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">比较的判断：</span><br><span class="line">==相等：只比较值 包含隐式类型转化 </span><br><span class="line">===绝对相等：除了比较值 还比较数据类型</span><br><span class="line">null == undefined  true</span><br><span class="line">string == number 发生隐式类型转化 </span><br><span class="line">boolean == bumber  boolean为真时转化为1 为假时转化为 0 </span><br><span class="line">隐式转化是通过自动调用Object.ValueOf()函数 返回一个数值</span><br></pre></td></tr></table></figure>
 
 <p>5、JS微任务和宏任务？</p>
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219233832198.png" alt="image-20220219233832198"></p>
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220219233916897.png" alt="image-20220219233916897"></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7PCfs"><img src="https://s1.ax1x.com/2022/07/19/j7PCfs.png" alt="j7PCfs.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7Pnk4"><img src="https://s1.ax1x.com/2022/07/19/j7Pnk4.png" alt="j7Pnk4.png"></a></p>
 <p>6、JS作用域(占80%)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">规则：除了函数之外，js没有块级作用域的</span><br><span class="line">     作用域链：内部可以访问外部的变量 外部访问不了内部的变量</span><br><span class="line">     		如果内部有变量 优先访问内部的 内部没有 才会去找外部的 沿着作用域链去找</span><br><span class="line">     		声名变量没有写 <span class="keyword">var</span>去声名 是全局变量 <span class="built_in">window</span>.b GA <span class="built_in">global</span> Action</span><br><span class="line">     		<span class="keyword">var</span>声名 会提升</span><br></pre></td></tr></table></figure>
 
@@ -561,24 +561,22 @@
 <p>31、手写diff算法-判断第5种情况</p>
 <p>32、手写diff算法 -创建和删除</p>
 <p>33、什么是MVVM？MVC MVP MVVM的理解？</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222234255569.png" alt="web1.0时代"></p>
-<p>​                                                                                                    web1.0时代</p>
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222234454147.png" alt="image-20220222234454147"></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7Pw9A"><img src="https://s1.ax1x.com/2022/07/19/j7Pw9A.png" alt="j7Pw9A.png"></a></p>
+<p>​                        web1.0时代</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7P2NQ"><img src="https://s1.ax1x.com/2022/07/19/j7P2NQ.png" alt="j7P2NQ.png"></a></p>
 <p>​                                                                                    web2.0时代MVC分层架构 </p>
-<p>​                                                                web2.0时代 ajax出现之后 前后端分离 前端通过ajax与后端数据交互 服务端压力减少 用户                                            体验提升 支持局部刷新 Jquery库的出现 操作DOM</p>
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235006590.png" alt="image-20220222235006590"></p>
-<p>​                                                                        前端MVC view  controlle r model</p>
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235508533.png" alt="image-20220222235508533"></p>
-<p>​                                                                            前端MVP model view presenter(中间人)</p>
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235554968.png" alt="image-20220222235554968"></p>
-<p>​                                                                        MVVM   model   view    viewModel(数据双向绑定)</p>
-<p>​                                                                        viewModel自动将数据变化转化为视图更新</p>
-<p>​                                                                        数据驱动视图</p>
-<p><img src="C:\Users\XINGJIANJIE\AppData\Roaming\Typora\typora-user-images\image-20220222235932950.png" alt="image-20220222235932950"></p>
+<p>​    web2.0时代 ajax出现之后 前后端分离 前端通过ajax与后端数据交互 服务端压力减少 用户                                        </p>
+<p>体验提升 支持局部刷新 Jquery库的出现 操作DOM</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7PbEF"><img src="https://s1.ax1x.com/2022/07/19/j7PbEF.png" alt="j7PbEF.png"></a></p>
+<p>​            前端MVC view  controlle r model</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7Pj3R"><img src="https://s1.ax1x.com/2022/07/19/j7Pj3R.png" alt="j7Pj3R.png"></a></p>
+<p>​            前端MVP model view presenter(中间人)</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7iPED"><img src="https://s1.ax1x.com/2022/07/19/j7iPED.png" alt="j7iPED.png"></a></p>
+<p>​                            MVVM   model   view    viewModel(数据双向绑定)</p>
+<p>​                                    viewModel自动将数据变化转化为视图更新</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/j7iMVS"><img src="https://s1.ax1x.com/2022/07/19/j7iMVS.png" alt="j7iMVS.png"></a></p>
 <p>这三个框架反应了web领域的发展进展，为了减少视图层和数据层的耦合问题</p>
-<p>节流阀和防抖</p>
+<p><strong>节流阀和防抖</strong></p>
 <p>节流：高频事件触发，n秒内只会执行一次，节流阀会稀释函数的执行频率</p>
 <p>防抖：触发高频事件后 n秒内只会执行一次 如果n秒内高频事件再次被触发则重新计算事件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">节流阀 是一个开关 目的时为了避免频繁的向服务器请求数据 </span><br><span class="line">设计原理：</span><br><span class="line">每次请求数据之前打开节流阀 数据返回来之后再次关闭节流阀</span><br><span class="line">如果节流阀打开 则无法请求数据</span><br></pre></td></tr></table></figure>
