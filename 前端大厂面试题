@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="高度自律 绝对自由">
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
@@ -293,6 +293,10 @@
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2022/07/20/高效时间管理法/" data-toggle="tooltip" data-placement="top" title="高效时间管理法">&larr; Previous post</a>
+                        </li>
                     
                     
                         <li class="next">
